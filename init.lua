@@ -3,6 +3,7 @@ require('user.keymaps')
 
 -- CONSTANTS
 -- MacOS '~/.config/nvim'
+-- Windows '~/AppData/Local/nvim'
 local NVIM_PATH = '~/AppData/Local/nvim'
 
 -- vim register sync to OS clipboard
@@ -33,7 +34,7 @@ require("lazy").setup(
 		{
 			"folke/flash.nvim",
 			event = "VeryLazy",
-			-- @type Flash.Config
+			---@type Flash.Config
 			opts = {},
 			-- stylua: ignore
 			keys = {
@@ -94,6 +95,16 @@ require("lazy").setup(
 		},
 	}
 )
+
+local autocmd = vim.api.nvim_create_autocmd
+-- andymass/vim-matchup configurations
+autocmd('VimEnter', {
+	callback = function()
+		vim.cmd('hi MatchWord gui=bold guibg=none')
+		vim.cmd('hi MatchParen gui=bold guibg=none')
+		vim.cmd('hi MatchParenCur gui=bold guibg=none')
+	end
+})
 
 -- Conditional load config
 if vim.g.vscode then
