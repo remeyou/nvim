@@ -1,3 +1,3 @@
 # nvim
 
-The backup of my neovim conifguration.
+The backup of my neovim configuration.
