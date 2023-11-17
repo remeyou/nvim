@@ -10,7 +10,3 @@ nnoremap K <Cmd>call <SID>switchEditor(v:count, 'next')<CR>
 xnoremap K <Cmd>call <SID>switchEditor(v:count, 'next')<CR>
 nnoremap J <Cmd>call <SID>switchEditor(v:count, 'prev')<CR>
 xnoremap J <Cmd>call <SID>switchEditor(v:count, 'prev')<CR>
-nnoremap <space>q <Cmd>call VSCodeNotify('workbench.action.revertAndCloseActiveEditor')<CR>
-xnoremap <space>q <Cmd>call VSCodeNotify('workbench.action.revertAndCloseActiveEditor')<CR>
-nnoremap <space>w <Cmd>call VSCodeNotify('workbench.action.files.save')<CR>
-xnoremap <space>w <Cmd>call VSCodeNotify('workbench.action.files.save')<CR>
