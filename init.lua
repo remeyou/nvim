@@ -13,6 +13,9 @@ local NVIM_PATH = '~/AppData/Local/nvim'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Do not highlight after searching
+vim.opt.hlsearch = false
+
 -- lazy.nvim configurations
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
