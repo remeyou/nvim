@@ -8,7 +8,9 @@ vim.g.maplocalleader = ' '
 
 -- keymap list
 map('n', '<leader>d', '"+d', opts)
+map('n', '<leader>D', '"+D', opts)
 map('n', '<leader>y', '"+y', opts)
+map('n', '<leader>Y', '"+Y', opts)
 map('n', '<leader>p', '"+p', opts)
 map('n', '<leader>P', '"+P', opts)
 map('n', '\\', ':', { noremap = true })
