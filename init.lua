@@ -10,7 +10,7 @@ local NVIM_PATH = '~/AppData/Local/nvim'
 -- vim.opt.clipboard=unnamedplus
 
 -- Ignore case sensitive when search
-vim.opt.ignorecase = true
+-- vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Do not highlight after searching
