@@ -85,6 +85,14 @@ require("lazy").setup(
 				vim.g.matchup_matchparen_offscreen = { method = "popup" }
 			end,
 		},
+		{
+			"gbprod/yanky.nvim",
+			opts = {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			},
+		}
 	},
 	{
 		ui = {
