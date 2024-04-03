@@ -50,10 +50,11 @@ require("lazy").setup(
 				{ "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
 				{
 					"S",
-					mode = { "n", "o", "x" },
-					function() require("flash").treesitter() end,
-					desc =
-					"Flash Treesitter"
+					-- mode = { "n", "o", "x" },
+					-- function() require("flash").treesitter() end,
+					-- desc =
+					-- "Flash Treesitter"
+					false
 				},
 				{
 					"r",
