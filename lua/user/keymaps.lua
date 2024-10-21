@@ -14,3 +14,12 @@ map('n', '<leader>Y', '"+Y', opts)
 map('n', '<leader>p', '"+p', opts)
 map('n', '<leader>P', '"+P', opts)
 map('n', '\\', ':', { noremap = true })
+
+-- gbprod/yanky.nvim
+vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
+vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
+
+vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
+vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
