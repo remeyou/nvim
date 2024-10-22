@@ -55,7 +55,10 @@ require("lazy").setup(
 				-- or leave it empty to use the default settings
 				-- refer to the configuration section below
 			},
-		}
+		},
+		-- 'rebelot/kanagawa.nvim',
+		'Mofiqul/vscode.nvim',
+		'xiyaowong/transparent.nvim'
 	},
 	{
 		ui = {
@@ -96,3 +99,5 @@ else
 	vim.opt.number = true
 	vim.opt.relativenumber = true
 end
+
+vim.cmd 'colorscheme vscode'
