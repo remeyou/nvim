@@ -98,6 +98,7 @@ else
 	-- Neovim configurations
 	vim.opt.number = true
 	vim.opt.relativenumber = true
+	vim.cmd 'colorscheme vscode'
+	-- require('vscode').load('light')
+	require('vscode').load('dark')
 end
-
-vim.cmd 'colorscheme vscode'
