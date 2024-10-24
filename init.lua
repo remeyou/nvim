@@ -80,16 +80,6 @@ require("lazy").setup(
 	}
 )
 
-local autocmd = vim.api.nvim_create_autocmd
--- andymass/vim-matchup configurations
-autocmd('VimEnter', {
-	callback = function()
-		vim.cmd('hi MatchWord gui=bold guibg=none')
-		vim.cmd('hi MatchParen gui=bold guibg=none')
-		vim.cmd('hi MatchParenCur gui=bold guibg=none')
-	end
-})
-
 -- Conditional load config
 if vim.g.vscode then
 	-- vscode-neovim extension configurations
