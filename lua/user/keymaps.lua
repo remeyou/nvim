@@ -7,13 +7,19 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- keymap list
-map('n', '<leader>d', '"+d', opts)
-map('n', '<leader>D', '"+D', opts)
-map('n', '<leader>y', '"+y', opts)
-map('n', '<leader>Y', '"+Y', opts)
-map('n', '<leader>p', '"+p', opts)
-map('n', '<leader>P', '"+P', opts)
-map('n', '\\', ':', { noremap = true })
+local list = {
+    { '<leader>d', '"+d' },
+    { '<leader>D', '"+D' },
+    { '<leader>y', '"+y' },
+    { '<leader>Y', '"+Y' },
+    { '<leader>p', '"+p' },
+    { '<leader>P', '"+P' },
+    { '\\',        ':',  { noremap = true } },
+}
+for i, v in ipairs(list) do
+    map('n', v[1], v[2], v[3] and v[3] or opts)
+    map('v', v[1], v[2], v[3] and v[3] or opts)
+end
 
 -- gbprod/yanky.nvim
 vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
