@@ -7,7 +7,7 @@ require('user.keymaps')
 local NVIM_PATH = '~/AppData/Local/nvim'
 
 -- vim register sync to OS clipboard
--- vim.opt.clipboard=unnamedplus
+vim.opt.clipboard:append('unnamedplus')
 
 -- Ignore case sensitive when search
 -- vim.opt.ignorecase = true

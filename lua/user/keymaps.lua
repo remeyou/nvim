@@ -8,13 +8,13 @@ vim.g.maplocalleader = ' '
 
 -- keymap list
 local list = {
-    { '<leader>d', '"+d' },
-    { '<leader>D', '"+D' },
-    { '<leader>y', '"+y' },
-    { '<leader>Y', '"+Y' },
-    { '<leader>p', '"+p' },
-    { '<leader>P', '"+P' },
-    { '\\',        ':',  { noremap = true } },
+    -- { '<leader>d', '"+d' },
+    -- { '<leader>D', '"+D' },
+    -- { '<leader>y', '"+y' },
+    -- { '<leader>Y', '"+Y' },
+    -- { '<leader>p', '"+p' },
+    -- { '<leader>P', '"+P' },
+    { '\\', ':', { noremap = true } },
 }
 for i, v in ipairs(list) do
     map('n', v[1], v[2], v[3] and v[3] or opts)
