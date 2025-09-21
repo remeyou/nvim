@@ -16,6 +16,9 @@ vim.opt.smartcase = true
 -- Do not highlight after searching
 vim.opt.hlsearch = false
 
+-- brglng/vim-im-select env variables
+vim.g.im_select_enable_cmd_line = 0
+
 -- lazy.nvim configurations
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -57,8 +60,16 @@ require("lazy").setup(
 			},
 		},
 		-- 'rebelot/kanagawa.nvim',
-		'Mofiqul/vscode.nvim',
-		'xiyaowong/transparent.nvim'
+		'xiyaowong/transparent.nvim',
+		-- git config --global core.pager "nvim -R -c 'AnsiEsc' -"
+		{
+			"powerman/vim-plugin-AnsiEsc",
+			lazy = false,
+			ft = { "git", "log" }, -- only load with Git environment
+			config = function()
+				vim.g.AnsiEsc_Colors = { ['1;31'] = 'ErrorMsg' }
+			end,
+		},
 	},
 	{
 		ui = {
@@ -88,7 +99,4 @@ else
 	-- Neovim configurations
 	vim.opt.number = true
 	vim.opt.relativenumber = true
-	vim.cmd 'colorscheme vscode'
-	-- require('vscode').load('light')
-	require('vscode').load('dark')
 end
