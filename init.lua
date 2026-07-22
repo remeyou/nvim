@@ -1,13 +1,13 @@
 -- Load user custom keymaps
-require('user.keymaps')
+require("user.keymaps")
 
 -- CONSTANTS
--- MacOS '~/.config/nvim'
--- Windows '~/AppData/Local/nvim'
-local NVIM_PATH = '~/AppData/Local/nvim'
+-- MacOS "~/.config/nvim"
+-- Windows "~/AppData/Local/nvim"
+local NVIM_PATH = "~/AppData/Local/nvim"
 
 -- vim register sync to OS clipboard
-vim.opt.clipboard:append('unnamedplus')
+vim.opt.clipboard:append("unnamedplus")
 
 -- Ignore case sensitive when search
 -- vim.opt.ignorecase = true
@@ -34,9 +34,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
 	{
-		'tpope/vim-surround',
-		'tpope/vim-repeat',
-		'brglng/vim-im-select',
+		"tpope/vim-surround",
+		"tpope/vim-repeat",
+		"brglng/vim-im-select",
 		{
 			"folke/flash.nvim",
 			event = "VeryLazy",
@@ -59,15 +59,15 @@ require("lazy").setup(
 				-- refer to the configuration section below
 			},
 		},
-		-- 'rebelot/kanagawa.nvim',
-		'xiyaowong/transparent.nvim',
-		-- git config --global core.pager "nvim -R -c 'AnsiEsc' -"
+		-- "rebelot/kanagawa.nvim",
+		"xiyaowong/transparent.nvim",
+		-- git config --global core.pager "nvim -R -c "AnsiEsc" -"
 		{
 			"powerman/vim-plugin-AnsiEsc",
 			lazy = false,
 			ft = { "git", "log" }, -- only load with Git environment
 			config = function()
-				vim.g.AnsiEsc_Colors = { ['1;31'] = 'ErrorMsg' }
+				vim.g.AnsiEsc_Colors = { ["1;31"] = "ErrorMsg" }
 			end,
 		},
 	},
@@ -94,7 +94,7 @@ require("lazy").setup(
 -- Conditional load config
 if vim.g.vscode then
 	-- vscode-neovim extension configurations
-	vim.cmd('source ' .. NVIM_PATH .. '/vim/vscode-tab-commands.vim')
+	vim.cmd("source " .. NVIM_PATH .. "/vim/vscode-tab-commands.vim")
 else
 	-- Neovim configurations
 	vim.opt.number = true
