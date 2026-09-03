@@ -1,7 +1,7 @@
 -- define leader key, default is \, here is space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.opt.timeoutlen = 0
+vim.opt.timeoutlen = 300
 
 -- keymap list
 -- { "<leader>d", '"+d' }
@@ -11,13 +11,15 @@ vim.opt.timeoutlen = 0
 -- { "<leader>p", '"+p' }
 -- { "<leader>P", '"+P' }
 vim.keymap.set({ "n", "x" }, "\\", ":")
-vim.keymap.set({ "n", "x" }, "(", "vi(")
+vim.keymap.set({ "n", "x" }, "(", "?(<CR>vi)")
 vim.keymap.set({ "n", "x" }, ")", "vi)")
-vim.keymap.set({ "n", "x" }, "{", "vi{")
+vim.keymap.set({ "n", "x" }, "{", "?{<CR>vi}")
 vim.keymap.set({ "n", "x" }, "}", "vi}")
-vim.keymap.set({ "n", "x" }, "[", "vi[")
+vim.keymap.set({ "n", "x" }, "[[", "{")
+vim.keymap.set({ "n", "x" }, "]]", "}")
+vim.keymap.set({ "n", "x" }, "[", "?[<CR>vi]")
 vim.keymap.set({ "n", "x" }, "]", "vi]")
-vim.keymap.set({ "n", "x" }, "<", "vi<")
+vim.keymap.set({ "n", "x" }, "<", "?<<CR>vi>")
 vim.keymap.set({ "n", "x" }, ">", "vi>")
 vim.keymap.set({ "n", "x" }, "'", "vi'")
 vim.keymap.set({ "n", "x" }, '"', 'vi"')
