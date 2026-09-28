@@ -1,8 +1,9 @@
 {
+  "calcium.nvim": { "branch": "main", "commit": "7a7d3740083fa5669e1a0f25d133705624a23f0d" },
   "flash.nvim": { "branch": "main", "commit": "5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "transparent.nvim": { "branch": "main", "commit": "e00ca1cf09caef575edf8da7e5a8b9193893b4c7" },
-  "vim-im-select": { "branch": "master", "commit": "fea18dab8bf9b153a0d7e1058d68a5d48ad6a0be" },
+  "vim-im-select": { "branch": "master", "commit": "a99f4e952bdbe03826b4c6d440176f79ed23ffb0" },
   "vim-plugin-AnsiEsc": { "branch": "master", "commit": "690f820d20b6e3a79ba20499874eb7333aa4ca5c" },
   "vim-repeat": { "branch": "master", "commit": "65846025c15494983dafe5e3b46c8f88ab2e9635" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },

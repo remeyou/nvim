@@ -6,7 +6,7 @@ function! s:switchEditor(...) abort
     endfor
 endfunction
 
-nnoremap K <Cmd>call <SID>switchEditor(v:count, 'next')<CR>
-xnoremap K <Cmd>call <SID>switchEditor(v:count, 'next')<CR>
-nnoremap J <Cmd>call <SID>switchEditor(v:count, 'prev')<CR>
-xnoremap J <Cmd>call <SID>switchEditor(v:count, 'prev')<CR>
+" nnoremap J <Cmd>call <SID>switchEditor(v:count, 'next')<CR>
+" xnoremap J <Cmd>call <SID>switchEditor(v:count, 'next')<CR>
+" nnoremap K <Cmd>call <SID>switchEditor(v:count, 'prev')<CR>
+" xnoremap K <Cmd>call <SID>switchEditor(v:count, 'prev')<CR>

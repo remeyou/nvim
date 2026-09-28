@@ -70,6 +70,11 @@ require("lazy").setup(
 				vim.g.AnsiEsc_Colors = { ["1;31"] = "ErrorMsg" }
 			end,
 		},
+		{
+			"necrom4/calcium.nvim",
+			cmd = { "Calcium" },
+			opts = {}
+		}
 	},
 	{
 		ui = {
